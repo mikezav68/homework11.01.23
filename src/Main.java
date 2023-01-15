@@ -57,13 +57,13 @@ public class Main {
         month = month +1;
         System.out.println("Месяц " + month + ", сумма накоплений " + schet + " рублей.");
     }
-
     }
     public static void task5 () {
         System.out.println("Задача 5");
         int schet = 15000;
+        int maximum = 12000000;
         int month = 0;
-        while (schet < 12000000) {
+        while (schet < maximum) {
             schet = (int) (schet * 1.07);
             month = month + 1;
             if (month % 6 == 0) {
@@ -76,8 +76,9 @@ public class Main {
         int schet = 15000;
         int month = 0;
         int years = 9;
+        double percent = 7/100D;
         while (month < years * 12) {
-            schet = (int) (schet * 1.07);
+            schet = (int) (schet + schet * percent);
             month = month + 1;
             if (month % 6 == 0) {
                 System.out.println("Месяц " + month + ", сумма накоплений " + schet + " рублей.");
@@ -86,23 +87,24 @@ public class Main {
     }
     public static void task7 () {
         System.out.println("Задача 7");
-        int friday = 2;
+        int friday = 6;
         int week = 7;
-        while (friday < 31) {
+        while (friday <= 31) {
             System.out.println("Сегодня пятница, " + friday + " число, пора делать отчёт!");
             friday = friday + week;
         }
     }
     public static void task8 () {
         System.out.println("Задача 8");
-        int currentYear = 0;
-        int start = 1823;
-        int finish = 2123;
-        while (currentYear < finish) {
-            if (currentYear > start) {
-                System.out.println(currentYear);
+        int year = 0;
+        int start = 2023 - 200;
+        int finish = 2023 + 100;
+        int period = 79;
+        while (year < finish) {
+            if (year > start) {
+                System.out.println(year);
             }
-            currentYear = currentYear + 79;
+            year = year + period;
         }
     }
 }
